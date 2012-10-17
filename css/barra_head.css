@@ -1,0 +1,163 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+	-webkit-user-select:  none;
+	-moz-user-select:  none;
+}
+
+#header{
+
+    margin-left: 50px;
+    margin-top: 6px;
+    padding-bottom: 8px;    
+    margin-right: 50px;
+    border-bottom: solid 2px #fff;
+    height: 27px;
+}
+
+#header img{    
+    width: 30px;
+    margin-left: 12px;
+}
+
+#btn_statistic{
+	position: absolute;
+	top: 8px;
+}
+
+#btn_sesion{
+	
+    cursor: pointer; 
+    width: 150px;
+
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#notifications_area{
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+#num_servicios{
+
+    position: absolute;
+    left: 175px;
+    top: 5px;
+    color: white;
+    background-color: #EB312E;
+    min-width: 11px;
+    border: solid 2px brown;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+	padding-top: 2px;
+	line-height: 14px;
+	display: none;
+}
+
+
+.menuFlotante{
+    
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+    z-index: 1;
+    width: 300px;
+    background-color: rgba(255,255,255,0.96);;
+    border-radius: 5px;
+    display: none;
+    box-shadow: inset 1px 0px 5px 1px #999;
+   
+  
+}
+
+#scroll_services{
+
+	max-height: 500px;
+	overflow-y: auto;
+	
+}
+
+.titulo_menuFlotante{
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #333;
+    padding-bottom:10px;
+    //border-bottom: solid 1px gray;
+    font-weight: bold;
+}
+
+.titulo_menuFlotante img{
+    float: right;
+    margin-right: 10px;
+    width: 13px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.servicios{
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    color: #777;
+    border-top: solid 1px gray;
+    font-size: 0.8em;
+    padding-left: 18px;
+}
+
+.servicios_nuevos{
+	padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    color: #666;
+    border-top: solid 1px gray;
+    font-size: 0.8em;	
+    border-left: solid 10px gray;
+}
+
+.subMenu{
+    
+    float: left;
+    width: 100%;
+    border-top: solid 1px #ccc;
+    cursor: pointer;
+    
+}
+
+.subMenu label{
+    float: left;
+    padding-top: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+    color: #666;
+}
+
+.subMenu img{
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+	width: 30px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.subMenu a{
+   color: #666;
+}
+
+
+.subMenu a:hover{
+   color: #666;
+}
+
+
+.subMenu a:visited{
+   color: #666;
+}

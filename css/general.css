@@ -1,0 +1,103 @@
+@font-face { font-family: Roboto; src: url('/font/Roboto-Regular.ttf'); } 
+@font-face { font-family: Roboto; font-weight: bold; src: url('/font/Roboto-bold.ttf'); }
+
+
+body{
+    
+    margin: 0px;
+    padding: 0px;
+    background: url('/img/background-system.jpg') no-repeat center center fixed; 
+    font-family: Verdana;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	user-select: none;
+	-webkit-user-select:  none;
+	-moz-user-select:  none;
+	height: 100%;
+	font-family: "Roboto";
+	overflow: hidden;
+	height: 100%;
+		
+} 
+
+.btn_detail_class{
+    margin-top: 2px;
+    border: 0;
+    border-radius: 2px;
+    //background-color: #0ed20e;
+    background-image: url('/img/fondo-btn.jpg');
+    height: 30px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    //border: solid 1px #0f0;
+
+}
+
+.btn_detail{
+    
+    width: 97%;
+    text-align: right;
+    
+}
+
+.panel_lateral{
+    
+    float: left;
+    width: 15%;
+    border-right: solid 1px #ccc;
+    height: 88%;
+    color: #555;
+    text-align: center;
+}
+
+.panel_lateral img{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 50px;
+}
+
+
+.content_fromMenu{
+    float: left;
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    margin-top: 15px;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.89);
+    padding-bottom: 30px;
+
+}
+
+.titleContent{
+
+    width: 100%;
+    float: left;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.titleContent label{
+    float: left;
+    padding-top: 12px;
+    padding-left: 5px;
+    color: #666;
+    padding-bottom: 9px;
+    border-bottom: solid 1px gray;
+    padding-right: 35px;
+}
+
+.titleContent img{
+    float: left;
+    margin-left: 10px;
+    padding-top: 5px;
+    width: 30px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px gray;
+    //padding-left: 10px;
+}

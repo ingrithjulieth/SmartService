@@ -1,0 +1,84 @@
+#content_tokens{
+
+	display: none;
+
+}
+
+#formulario{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    color: #666;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #ccc;
+    width: 93%
+    background-color: #ccc;
+}
+
+#no_doc input{
+
+	width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-left: 37px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: solid 1px #ddd;
+    //box-shadow: inset 0px 0px 1px gray;
+    
+
+}
+
+#name_huesped input{
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: solid 1px #ddd;
+    //box-shadow: inset 0px 0px 1px gray;
+
+}
+
+#fecha_venc input{
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: solid 1px #ddd;
+    margin-left: 12px;
+  
+}
+
+#habitacion select{
+    
+    width: 210px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: solid 1px #ddd;
+}
+
+#mail input{
+
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: solid 1px #ddd;
+    margin-left: 107px;
+
+}

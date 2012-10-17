@@ -1,0 +1,93 @@
+@font-face { font-family: Roboto; src: url('/font/Roboto-Regular.ttf'); } 
+@font-face { font-family: Roboto; font-weight: bold; src: url('/font/Roboto-bold'); }
+
+body{
+    
+    margin: 0px;
+    padding: 0px;
+    background: url('/img/background.jpg') no-repeat center center fixed; 
+    font-family: Verdana;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	user-select: none;
+	-webkit-user-select:  none;
+	-moz-user-select:  none;
+		
+} 
+
+form{
+
+    width: 333px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+form input[type=text]{
+    
+    width: 333px;
+    height: 40px;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 1.2em;
+    padding-left: 10px;
+    border: solid 1px #3F6D7F;
+    box-shadow: inset 0px 0px 10px gray;
+    
+}
+
+form input[type=password]{
+    
+    width: 333px;
+    height: 40px;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 1.2em;
+    padding-left: 10px;
+    border: solid 1px #3F6D7F;
+    margin-bottom: 30px;
+    box-shadow: inset 0px 0px 10px gray;
+    
+}
+
+form input[type=submit]{
+    
+    border: none;
+    font-size: 0.8em;
+    color: #fff;
+    height: 33px;
+    width: 70px;
+    margin-left: 10px;
+    background-image: url('/img/fondo-btn.jpg');
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
+#recuerda_pass{
+    color: #fff;
+    margin-left: 22px;
+    
+}
+
+#logo_producto{
+
+    margin-top: 50px;
+	width: 100%;	
+    text-align: center;
+}
+
+#about_us{
+	
+	position: absolute;
+	top: 91%;
+	color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.7em;
+	
+}
