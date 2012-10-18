@@ -282,6 +282,11 @@ class Site extends CI_Controller{
 		
 	}
 
+	function updateItemServicios(){
+		$id_item = $this->input->post('id_item');
+		$this->Site_mdl->updateItemServicios($id_item,$this->input->post());
+	}
+
 
 	function guardaFotoItem(){
 

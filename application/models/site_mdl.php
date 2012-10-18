@@ -7,6 +7,12 @@
 	        date_default_timezone_set('America/Bogota');
 	    }
 
+	    function updateItemServicios($id, $data){
+	    	$this->db->where('id_item', $id);
+			$this->db->update('item', $data); 
+			return true;
+	    }
+
 	    function updatePassword($identificacion,$passNew){
 	    	$q = $this->db->query("UPDATE usuario set pass_d_sistema = ".$passNew." where cedula = ".$identificacion);
 	    }

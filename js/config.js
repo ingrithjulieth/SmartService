@@ -22,13 +22,13 @@ $(document).ready(function(){
 		var nombre = $('#row'+id+' > .nombre').html(); 
 		var categ  = $('#row'+id+' > .categoria').attr('data-id');
 		var valor  = $('#row'+id+' > .valor').html();
+
 		console.log(categ);
 
 		$('input[name="codigo_contable"]').val(codigo);
 		$('input[name="item"]').val(nombre);
 		//$('select[name="id_categoria"]').attr('id_categoria')
 		$('input[name="valor"]').val(valor);
-
 		$('#form_configItem').css('display', 'block');
 		$('#form_configItem').css('visibility', 'visible');
 		$('#div_table').css('display', 'none');
@@ -36,12 +36,17 @@ $(document).ready(function(){
 		$('#form_configItem').css('display', 'block');
 		$('#slt_categorias option[value='+categ+']').attr('selected', true);
 		$('#formItem').attr('data-action','edit_item');
+		$('#formItem').attr('data-action','actualizar_item');
+		$('#formItem').attr('data-idItem',id);
+		$('#formItem').css('visibility', 'visible');
+		$('#formItem').val("Actualizar");
 
 	});
 
+
 	$('#edit_item').click(function(){
-		$('#form_configItem').css('display', 'none');
 		$('#div_table').css('display', 'block');
+		$('#form_configItem').css('display', 'none');
 	});
 
 	$('#add_item').click(function(){
@@ -54,7 +59,6 @@ $(document).ready(function(){
 	});
 
 	$.post('getCategory', function(data){
-		console.log(data);
 		$.each(data, function(){
 			$('#slt_categorias').append('<option value="'+this.id_tipo+'">'+this.nom_tipo_servicio+'</option>');
 		});
@@ -115,6 +119,7 @@ $(document).ready(function(){
 			}, 'json');
 		//Termina Aqui.
 	});
+
 
 	$('.delete_item').live('click', function(){
 		var id = $(this).attr('data-id');
@@ -238,7 +243,7 @@ $(document).ready(function(){
 		$('#list_privilegios').clearForm();
 	});
 
-	var fileUploadImgName;
+	var fileUploadImgName ='0';
 
 	new AjaxUpload('upload', {
 		  action: 'guardaFotoItem',
@@ -266,24 +271,41 @@ $(document).ready(function(){
 
 		if($('#slt_categorias').val() == '0'){
 			c_errores = true;
-			console.log('sin categoria.');
 		}
 
-		
-			
 		if(c_errores == true){
-			alert('Debe Diligencias todos los campos antes de Guardar')
-		}else{
-			var queryString = $('#form_configItem').formSerialize();
-			queryString = queryString + fileUploadImgName;
-			console.log(queryString);
-			$.post('setItem', queryString, function(data){
-	 			alert('Nuevo Item Ingresado Correctamente');
-	 			$('#form_configItem').resetForm();
-	 		}, 'json');	
-		} 
-	});
+			alert('Debe Diligencias todos los campos antes de Guardar');
 
+		}else{
+
+			if ($('#formItem').attr('data-action') == 'add_item') {
+				var queryString = $('#form_configItem').formSerialize();
+				queryString = queryString + fileUploadImgName;
+				console.log(queryString);
+				$.post('setItem', queryString, function(data){
+		 			alert('Nuevo Item Ingresado Correctamente');
+		 			$('#form_configItem').resetForm();
+		 		}, 'json');				
+		 	
+		 	}else{
+		 		var id = '&id_item='+$('#formItem').attr('data-iditem');
+				var queryString = $('#form_configItem').formSerialize();
+				if (fileUploadImgName == '0') {
+					queryString = queryString.replace('&foto_item=','') + id;
+				}else{
+					queryString = queryString + fileUploadImgName + id;					
+				};
+				console.log(queryString);
+				$.post('updateItemServicios', queryString, function(data){
+		 			alert('Datos Actualizados Correctamente');
+		 			$('#form_configItem').resetForm();
+		 		}, 'json');	
+
+			}
+		
+		}
+			
+	});	
 	$('#limpiaFormItem').click(function(){
 		$('#form_configItem').resetForm();
 	});
